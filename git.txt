@@ -1,2 +1,21 @@
-git init
-git branch -M main
+git init => initilize git
+git branch -M main => making default branch as main instead of master
+git add => adding all the file which needs to go inside commit 
+git commit => creating commit
+
+
+packapge.json => it is configuration for npm its keep track of what verson of that package install in our system
+packapge.json => its lock the verson and keeps the  record it keeps the record of every exact verson 
+
+  "devDependencies": {
+    "parcel": "^2.10.0"
+  }
+
+  parcel => it is a bundler like vite and webpack
+
+^ => its called carret => it update minor verson automatically 
+~ => its tilde => it update major verson automatically too
+
+when we install any package because we want our app to dependent on that package that package can also have some dependency and that depedency can have their dependecy this is called transitive dependency
+
+node modules => it is a collection of dependency its like database will will have all the dependy
