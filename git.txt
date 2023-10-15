@@ -19,3 +19,6 @@ packapge.json => its lock the verson and keeps the  record it keeps the record o
 when we install any package because we want our app to dependent on that package that package can also have some dependency and that depedency can have their dependecy this is called transitive dependency
 
 node modules => it is a collection of dependency its like database will will have all the dependy
+
+
+JSX => jsx is html or xml like syntax
