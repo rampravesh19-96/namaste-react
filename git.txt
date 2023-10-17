@@ -22,3 +22,39 @@ node modules => it is a collection of dependency its like database will will hav
 
 
 JSX => jsx is html or xml like syntax
+
+
+When ever state variable changes react rerender the components
+
+
+important
+
+react uses something known as reconciliation and this recouncilation algorithm also known as react fiber 
+suppose we have res container like dom tree its has 7 restaurant cards and now mu ui changes filtering thsese 7 cards to 3 filtered cards
+now what react do and why react is fast as soon as cards are filtered from 7  to 3 react create virtual DOM virtual DOM is not an actual DOm 
+what is actual DOM its basically a tag 
+
+virtual DOM is representation of actual DOM virtual DOM is an Object whicbh is ReactElement 
+its a normal JS object 
+
+DIFF algorithm => Diff algo find the difference between two virtual dom 
+find diff between updated virtual DOM and Previous Virtual DOM
+
+Example 
+we had a 7 cards in res-container when click on top rated restaurant btn it become three in previous virtual dom has 7 cards and now become 3
+it update the state variable and rerender the component
+it compare the three card virtual dom with 7 card virtual dom find the diff using Diff Algorithm which is called reconciliation this concept comes in
+react 16 then the actual dom is updated 
+
+
+react can efficiently find out the diff between virtual dom and update the UI 
+
+why react is fast 
+because it has virtual DOM 
+it has a diff algorith which is very efficient it can do efficient DOM manipulation it can find out the diff and update the UI
+
+react keep UI layer and data layer in SYnc that is the core algorithm of react
+
+
+in core JS we can not redefine const varaible but how state variable's value get changed even declared with const because it does not change
+that variable value when we try to update state var entire component is rendered with new state varibale

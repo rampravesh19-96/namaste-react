@@ -1,0 +1,8 @@
+First Constructor called
+second render() called
+third componentDidMount()
+
+There are Phases is state and life cycle first is render phase and second is commit phase if two sibling component are here then render phase of 
+both sibling batch together and both rendering will get executed then commit phase of both will get exceuted
+
+because when commit phase start react update the DOM and DOM manupulation is most expensive thing so react does not want to DOM manipulation twice

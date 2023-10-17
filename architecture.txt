@@ -1,0 +1,3 @@
+Monolith Architacture => Traditionally when app used to develop all using monolithin Architacture 
+microservice Architacture => every part of websites will be seperate server this is known as seperation of concern
+it follows single responsiblity priniciples its only has its own responsibility 
