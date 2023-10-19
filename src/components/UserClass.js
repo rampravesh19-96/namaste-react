@@ -4,35 +4,39 @@ export default class UserClass extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
-      count2: 2,
+      userInfo: {
+        name: "Dummy",
+        location: "Default",
+        avatar_url:
+          "https://beforeigosolutions.com/wp-content/uploads/2021/12/dummy-profile-pic-300x300-1.png",
+      },
     };
-    console.log(this.props.name + "Child Constructor");
+
+    console.log("Constructor");
   }
 
-  async componentDidMount(){
-    console.log(this.props.name + "Child Component Did Mount");
-    const data = await fetch("https://api.github.com/users/akshaymarch7")
-    const json = await data.json()
-    console.log(json);
+  async componentDidMount() {
+    const data = await fetch("https://api.github.com/users/akshaymarch7");
+    const json = await data.json();
+    this.setState({ userInfo: json });
+    console.log("Componrnt Did Mount");
   }
 
+  componentDidUpdate() {
+    console.log("Componrnt Did Update");
+  }
+
+  componentWillUnmount() {
+    console.log("Component will mount");
+  }
   render() {
-    const { name, location } = this.props;
-    const { count } = this.state;
-
-    console.log(this.props.name + "Child Render");
+    const { name, location, avatar_url } = this.state.userInfo;
+    console.log("render");
     return (
       <div className="user-card">
-        <h1>Count: {count}</h1>
-        <button
-          onClick={() => {
-            this.setState({ count: this.state.count + 1 });
-            this.setState({ count2: this.state.count2 + 1 });
-          }}
-        >
-          Count Increase
-        </button>
+        <div className="dummy-img">
+          <img src={avatar_url} alt="" />
+        </div>
         <h2>Name: {name}</h2>
         <h3>Location: {location}</h3>
         <h4>Contact: @akshaymarch7</h4>
@@ -40,3 +44,24 @@ export default class UserClass extends Component {
     );
   }
 }
+
+/****
+ *
+ *  --- MOUNTING ---
+ *
+ * Constructor (dummy)
+ * Render (dummy)
+ *      <HTML Dummy >
+ * Component Did Mount
+ *      <API Call>
+ *      <this.setState> -> State variable is Updated
+ *
+ * --- UPDATE
+ *
+ *     render (Api data)
+ *     <HTML (new Api data)>
+ * componentDid update
+ *
+ *
+ *
+ */

@@ -105,3 +105,15 @@ its a component which extend React.Component it has a render method which return
     - First ComponentDIdMount
     - Second ComponentDIdMount
 - Parent ComponentDIdMount
+
+# Single Responsibility principle for evry Component
+
+# Heigher Order components
+
+its a component that takes a components and return a componenty
+HOC takes an component as an input and then enchance the component add some extra feature to that component and return it back
+
+# Controlled component and Lifting state up
+
+if a child component is controlled by parent component by passing value through props that component is called controlled component if parent 
+dont have any controll on child that is uncontrolled component like here we made accordian where RestaurantMenu Component is controlled by RestaurantCategory Component 
