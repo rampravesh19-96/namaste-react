@@ -4,6 +4,22 @@ import "@testing-library/jest-dom";
 
 
 describe("Contact Page test case grouping", () => {
+
+  // beforeAll(()=>{
+  //   console.log("It runs Before  all test cases");
+  // })
+
+  // beforeEach(()=>{
+  //   console.log("It runs Before  each test cases");
+  // })
+  // afterAll(()=>{
+  //   console.log("It runs Before  all test cases");
+  // })
+
+  // afterEach(()=>{
+  //   console.log("It runs Before  each test cases");
+  // })
+
   test("Should  load contact us component", () => {
     render(<Contact />);
 

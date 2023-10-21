@@ -12,7 +12,7 @@ const Body = () => {
 
   const RestarantCardPromoted = withPromotedLabel(RestaurantCard);
 
-  console.log(listOfRestaurants);
+  // console.log(filteredRestaurant);
 
   useEffect(() => {
     fetchData();
@@ -28,9 +28,9 @@ const Body = () => {
         ?.restaurants;
     setListOfrestaurants(navigatedData);
     setFilteredRestaurant(navigatedData);
-    console.log(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    // console.log(
+    //   json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    // );
   };
 
   const onlineStatus = useOnlineStatus();
@@ -66,7 +66,7 @@ const Body = () => {
               const restaurantFileter = listOfRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
-              console.log(restaurantFileter);
+              // console.log(restaurantFileter);
               setFilteredRestaurant(restaurantFileter);
             }}
           >
@@ -80,8 +80,8 @@ const Body = () => {
               const filteredList = listOfRestaurants.filter(
                 (res) => res.info.avgRating > 4
               );
-              console.log("filteredList");
-              console.log(filteredList);
+              // console.log("filteredList");
+              // console.log(filteredList);
               setFilteredRestaurant(filteredList);
             }}
           >
